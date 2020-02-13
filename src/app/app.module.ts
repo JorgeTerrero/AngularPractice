@@ -14,6 +14,7 @@ import { RepiceDetailsComponent } from './components/recipe-book/repice-details/
 import { ShoopingEditComponent } from './components/shopping-list/shooping-edit/shooping-edit.component';
 import {BsDropdownModule} from 'ngx-bootstrap';
 import { from } from 'rxjs';
+import { TestServerComponent } from './testServer/testServer.component';
 @NgModule({
    declarations: [
       AppComponent,
@@ -25,7 +26,8 @@ import { from } from 'rxjs';
       RepiceListComponent,
       RepiceItemComponent,
       RepiceDetailsComponent,
-      ShoopingEditComponent
+      ShoopingEditComponent,
+      TestServerComponent
    ],
    imports: [
       BrowserModule,
