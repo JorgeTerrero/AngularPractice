@@ -1,2 +1,21 @@
-<p>repice-list works!</p>
-<app-repice-item></app-repice-item>
+<div class="row mt-2">
+    <div class="col-xs-12">
+        <button class="btn btn-success">New Recipe</button>
+    </div>
+</div>
+<div class="row mt-2">
+    <div class="col-xs-12" *ngFor="let item of recipes">
+       
+        <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+            {{item.name}}
+              <span class="mx-2">
+                  <img src="{{item.imagePath}}" alt="" class="img-responsive" style="max-height: 50px;">
+              </span>
+            </li>
+            
+          </ul>
+        
+        <app-repice-item></app-repice-item>
+    </div>
+</div>

@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -11,7 +12,8 @@ import { RepiceListComponent } from './components/recipe-book/repice-list/repice
 import { RepiceItemComponent } from './components/recipe-book/repice-item/repice-item.component';
 import { RepiceDetailsComponent } from './components/recipe-book/repice-details/repice-details.component';
 import { ShoopingEditComponent } from './components/shopping-list/shooping-edit/shooping-edit.component';
-
+import {BsDropdownModule} from 'ngx-bootstrap';
+import { from } from 'rxjs';
 @NgModule({
    declarations: [
       AppComponent,
@@ -26,7 +28,10 @@ import { ShoopingEditComponent } from './components/shopping-list/shooping-edit/
       ShoopingEditComponent
    ],
    imports: [
-      BrowserModule
+      BrowserModule,
+      BrowserAnimationsModule,
+      BsDropdownModule,
+      BsDropdownModule.forRoot()
    ],
    providers: [],
    bootstrap: [
