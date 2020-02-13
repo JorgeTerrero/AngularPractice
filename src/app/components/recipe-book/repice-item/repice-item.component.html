@@ -1,1 +1,13 @@
-<p>repice-item works!</p>
+<div class="col-xs-12" *ngFor="let item of recipes">
+       
+    <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+        {{item.name}}
+          <span class="mx-2">
+              <img src="{{item.imagePath}}" alt="" class="img-responsive" style="max-height: 50px;">
+          </span>
+        </li>
+        
+      </ul>
+    
+</div>
