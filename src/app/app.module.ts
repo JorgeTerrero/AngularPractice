@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-
+import {FormsModule} from '@angular/forms'
 import { AppComponent } from './app.component';
 import { SuccessAlertComponent } from './successAlert/successAlert.component';
 import { ErrorAlertComponent } from './errorAlert/errorAlert.component';
@@ -33,7 +33,8 @@ import { TestServerComponent } from './testServer/testServer.component';
       BrowserModule,
       BrowserAnimationsModule,
       BsDropdownModule,
-      BsDropdownModule.forRoot()
+      BsDropdownModule.forRoot(),
+      FormsModule
    ],
    providers: [],
    bootstrap: [
