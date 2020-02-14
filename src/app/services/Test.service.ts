@@ -3,7 +3,7 @@ import { Injectable, OnInit } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class TestService implements OnInit {
+export class TestService  {
   
   arrUser = ['Mike' , 'Carla' , 'Max' , 'Penelope' , 'Luis' , 'Marla'];
   activeUser: any[] = [];
@@ -11,13 +11,41 @@ export class TestService implements OnInit {
 
 constructor() { }
 
-ngOnInit(): void {
-   this.activeUser = this.arrUser;
-   console.log('is Fill?' , this.activeUser);
+
+
+setActiveUser(id: number) {
+   if(this.unActiveUser.length > 0){
+       for (let i = 0; i < this.unActiveUser.length; i++) {
+           if( i == id) {
+               this.activeUser.push[this.unActiveUser[id]];
+               this.unActiveUser.splice(id , 1);
+           }  
+       }
+   }else{
+      if(this.unActiveUser.length < 0 ){
+        console.log('No hay Usuarios Desactivados ')
+      }
+   }  
 }
 
-setActiveUser() {
-     
+setUnActiveUser(id: number) {
+        if(this.activeUser.length > 0){
+             for (let i = 0; i < this.activeUser.length; i++) {
+               
+              if( i == id){
+                 this.unActiveUser.push(this.activeUser[id]);
+                 this.activeUser.splice(id , 1);
+              }
+               
+             }
+        }
 }
+
+assigneUser(){
+  this.activeUser = this.arrUser;
+  console.log('is Fill?' , this.activeUser);
+}
+
+
 
 }

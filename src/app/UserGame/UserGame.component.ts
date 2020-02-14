@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TestService } from '../services/Test.service';
 
 @Component({
   selector: 'app-UserGame',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserGameComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: TestService) { }
 
   ngOnInit() {
+    this.service.assigneUser();
   }
 
 }
