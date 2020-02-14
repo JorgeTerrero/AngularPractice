@@ -7,11 +7,25 @@ import { TestService } from '../services/Test.service';
   styleUrls: ['./UserGame.component.css']
 })
 export class UserGameComponent implements OnInit {
+ 
+  unActiveData: any[];
+  activeData: any[];
 
   constructor(private service: TestService) { }
 
   ngOnInit() {
-    this.service.assigneUser();
+    this.activeData = this.service.getActiveUser();
+    this.unActiveData = this.service.getUnActiveUser();
   }
+
+  onUnActiveUser(index: number){
+    this.service.setActiveUser(index);
+  }
+
+  onActiveUser(index: number){
+    
+      this.service.setUnActiveUser(index);
+  }
+ 
 
 }

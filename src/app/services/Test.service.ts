@@ -5,48 +5,59 @@ import { Injectable, OnInit } from '@angular/core';
 })
 export class TestService  {
   
-  arrUser = ['Mike' , 'Carla' , 'Max' , 'Penelope' , 'Luis' , 'Marla'];
-  activeUser: any[] = [];
-  unActiveUser: any[] = []
+  activeUser = ['Mike' , 'Luisa' , 'Miguel' , 'Yolanda'];
+  unActive = [];
 
-constructor() { }
-
-
-
-setActiveUser(id: number) {
-   if(this.unActiveUser.length > 0){
-       for (let i = 0; i < this.unActiveUser.length; i++) {
-           if( i == id) {
-               this.activeUser.push[this.unActiveUser[id]];
-               this.unActiveUser.splice(id , 1);
-           }  
-       }
-   }else{
-      if(this.unActiveUser.length < 0 ){
-        console.log('No hay Usuarios Desactivados ')
-      }
-   } 
+constructor() {
    
-   return this.activeUser;
 }
 
-setUnActiveUser(id: number) {
-        if(this.activeUser.length > 0){
-             for (let i = 0; i < this.activeUser.length; i++) {
-               
-              if( i == id){
-                 this.unActiveUser.push(this.activeUser[id]);
-                 this.activeUser.splice(id , 1);
-              }
-               
-             }
+getActiveUser() {
+  return this.activeUser;
+}
+
+getUnActiveUser(){
+  return this.unActive;
+}
+
+ setActiveUser(index: number){
+      if(this.activeUser.length > 0){
+        
+        for(let i=0 ; i < this.activeUser.length ; i++ ){
+
+          if(i == index) {
+              this.unActive.push(this.activeUser[index]);
+              this.activeUser.splice(index , 1);
+          }
+
+          if( i < 0) {
+             console.log('No Hay?')
+          }
+
         }
-  return this.unActiveUser;      
-}
 
-assigneUser(){
-  this.activeUser = this.arrUser;
-  console.log('is Fill?' , this.activeUser);
+      }
+ }
+
+ setUnActiveUser(index:number){
+  if(this.unActive.length > 0){
+    
+    for(let i=0 ; i < this.unActive.length ; i++ ){
+
+      if(i == index) {
+          this.activeUser.push(this.unActive[index]);
+          this.unActive.splice(index , 1);
+      }
+
+      if( i < 0) {
+         console.log('No Hay?')
+      }
+
+    }
+
+  }
+
+
 }
 
 

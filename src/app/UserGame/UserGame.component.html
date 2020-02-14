@@ -1,3 +1,48 @@
-<p>
-  UserGame works!
-</p>
+<div class="Container">
+
+  <div class="row">
+
+    <div class="col-sm-6">
+
+      <div class="card">
+        <div class="card-header bg-success text-center text-white">
+          Active Users
+        </div>
+        <div class="card-body">
+
+          <ul class="list-group" *ngFor="let item of activeData; let i=index">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              {{item}}
+              <span class="badge badge-danger badge-pill" (click)="onUnActiveUser(i)">UnActive</span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!--UnActive Users-->
+
+    <div class="col-md-6">
+      
+      <div class="card ">
+       <div class="card-header text-white text-center bg-danger">
+          UnActive Users
+        </div>
+        <div class="card-body">
+          <ul class="list-group" *ngFor="let item of unActiveData; let i=index">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              {{item}}
+              <span class="badge badge-success badge-pill" (click)="onActiveUser(i)">Active</span>
+            </li>
+      </ul>
+        </div>
+      </div>
+      
+      
+      </div>
+
+
+  </div>
+
+</div>
