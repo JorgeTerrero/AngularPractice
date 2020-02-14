@@ -8,6 +8,16 @@
 
 </div> -->
 
-<div class="conteiner">
+<!-- <div class="conteiner">
       <app-testServer></app-testServer>
+</div> -->
+
+<app-ControlGame (countEventFired)="onCountFired($event)"></app-ControlGame>
+<div *ngFor="let item of countList">
+  <div class="alert alert-primary" *ngIf="item % 2 == 0" >
+  <app-OddControlGame [oddNumber]="item"></app-OddControlGame>
+  </div>
+  <div class="alert alert-success" *ngIf="item % 2==1">
+    <app-EventControlGame [eventNumber]="item"></app-EventControlGame>
+  </div>
 </div>
