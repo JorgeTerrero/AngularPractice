@@ -18,6 +18,7 @@ import { TestServerComponent } from './testServer/testServer.component';
 import { ControlGameComponent } from './ControlGame/ControlGame.component';
 import { OddControlGameComponent } from './OddControlGame/OddControlGame.component';
 import { EventControlGameComponent } from './EventControlGame/EventControlGame.component';
+import { UserGameComponent } from './UserGame/UserGame.component';
 @NgModule({
    declarations: [
       AppComponent,
@@ -33,7 +34,8 @@ import { EventControlGameComponent } from './EventControlGame/EventControlGame.c
       TestServerComponent,
       ControlGameComponent,
       OddControlGameComponent,
-      EventControlGameComponent
+      EventControlGameComponent,
+      UserGameComponent
    ],
    imports: [
       BrowserModule,
