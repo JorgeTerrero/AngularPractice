@@ -16,6 +16,8 @@ import {BsDropdownModule} from 'ngx-bootstrap';
 import { from } from 'rxjs';
 import { TestServerComponent } from './testServer/testServer.component';
 import { ControlGameComponent } from './ControlGame/ControlGame.component';
+import { OddControlGameComponent } from './OddControlGame/OddControlGame.component';
+import { EventControlGameComponent } from './EventControlGame/EventControlGame.component';
 @NgModule({
    declarations: [
       AppComponent,
@@ -29,7 +31,9 @@ import { ControlGameComponent } from './ControlGame/ControlGame.component';
       RepiceDetailsComponent,
       ShoopingEditComponent,
       TestServerComponent,
-      ControlGameComponent
+      ControlGameComponent,
+      OddControlGameComponent,
+      EventControlGameComponent
    ],
    imports: [
       BrowserModule,

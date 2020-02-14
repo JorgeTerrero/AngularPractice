@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'practice-angular';
+  
+  countList: number[] = [];
+
+
+  onCountFired(fireCount: number) {
+      this.countList.push(fireCount);
+      console.log(this.countList);
+  }
+
+
 }
