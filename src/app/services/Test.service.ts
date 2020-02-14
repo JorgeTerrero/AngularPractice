@@ -25,7 +25,9 @@ setActiveUser(id: number) {
       if(this.unActiveUser.length < 0 ){
         console.log('No hay Usuarios Desactivados ')
       }
-   }  
+   } 
+   
+   return this.activeUser;
 }
 
 setUnActiveUser(id: number) {
@@ -39,6 +41,7 @@ setUnActiveUser(id: number) {
                
              }
         }
+  return this.unActiveUser;      
 }
 
 assigneUser(){
